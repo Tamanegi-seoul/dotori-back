@@ -1,9 +1,12 @@
-package protokoll.eatscape.place.domain;
+package protokoll.eatscape.place;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.time.DayOfWeek;
+import java.util.List;
 
 @Entity
 @Table(name = "account")
@@ -21,5 +24,19 @@ public class Place {
 
     @Embedded
     private Location location;
+
+    @Column(name = "contact")
+    private String contact;
+
+    @Column(name = "operationDays")
+    private List<DayOfWeek> operationDays;
+
+    @Column(name = "oprationDesc")
+    private String operationDesc;
+
+    @OneToMany(mappedBy = "rateId")
+    private List<Rate> rates;
+
+    private List<Category> categories;
 
 }

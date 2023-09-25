@@ -1,4 +1,4 @@
-package protokoll.eatscape.post.domain;
+package protokoll.eatscape.comment;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -6,18 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "post")
+@Table(name = "comment")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Posts {
+public class Comment {
 
     @Id
     @GeneratedValue
-    @Column(name = "post_id")
+    @Column(name = "comment_id")
     private Long id;
-
-    @Column(name = "title")
-    private String title;
 
     @Column(name = "content")
     private String content;

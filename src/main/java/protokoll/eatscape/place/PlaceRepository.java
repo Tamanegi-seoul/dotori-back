@@ -1,7 +1,9 @@
-package protokoll.eatscape.place.dao;
+package protokoll.eatscape.place;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import protokoll.eatscape.place.domain.Place;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface PlaceRepository extends JpaRepository<Place, Long> {
+
 }

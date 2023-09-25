@@ -1,4 +1,4 @@
-package protokoll.eatscape.account.domain;
+package protokoll.eatscape.account;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

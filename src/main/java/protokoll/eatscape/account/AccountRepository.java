@@ -1,8 +1,10 @@
-package protokoll.eatscape.account.dao;
+package protokoll.eatscape.account;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import protokoll.eatscape.account.domain.Account;
+import org.springframework.stereotype.Repository;
+import protokoll.eatscape.account.Account;
 
+@Repository
 public interface AccountRepository extends JpaRepository<Account, Long> {
 
     Account findAccountByEmail(String email);
