@@ -1,13 +1,13 @@
-package protokoll.eatscape;
+package protokoll.dotori;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EatscapeApplication {
+public class DotoriApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EatscapeApplication.class, args);
+        SpringApplication.run(DotoriApplication.class, args);
     }
 
 }

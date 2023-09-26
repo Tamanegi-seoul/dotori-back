@@ -1,4 +1,4 @@
-package protokoll.eatscape.account;
+package protokoll.dotori.account;
 
 import org.springframework.web.bind.annotation.RestController;
 

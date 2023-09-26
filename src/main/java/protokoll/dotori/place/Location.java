@@ -1,7 +1,6 @@
-package protokoll.eatscape.place;
+package protokoll.dotori.place;
 
 import jakarta.persistence.Embeddable;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 

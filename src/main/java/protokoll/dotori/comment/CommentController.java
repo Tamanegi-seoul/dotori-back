@@ -1,4 +1,4 @@
-package protokoll.eatscape.comment;
+package protokoll.dotori.comment;
 
 import org.springframework.web.bind.annotation.RestController;
 

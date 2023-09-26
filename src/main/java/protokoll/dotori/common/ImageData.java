@@ -1,4 +1,4 @@
-package protokoll.eatscape.common;
+package protokoll.dotori.common;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

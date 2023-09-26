@@ -1,7 +1,7 @@
-package protokoll.eatscape.place;
+package protokoll.dotori.place;
 
 import jakarta.persistence.*;
-import protokoll.eatscape.account.Account;
+import protokoll.dotori.account.Account;
 
 @Entity
 public class Rate {

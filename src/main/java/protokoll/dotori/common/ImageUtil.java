@@ -1,4 +1,4 @@
-package protokoll.eatscape.common;
+package protokoll.dotori.common;
 
 
 import lombok.extern.slf4j.Slf4j;

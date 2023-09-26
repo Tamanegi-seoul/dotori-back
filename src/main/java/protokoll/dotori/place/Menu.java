@@ -1,12 +1,9 @@
-package protokoll.eatscape.place;
+package protokoll.dotori.place;
 
-import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import protokoll.eatscape.common.ImageData;
-
-import java.awt.image.BufferedImage;
+import protokoll.dotori.common.ImageData;
 
 @Entity
 public class Menu {

@@ -1,4 +1,4 @@
-package protokoll.eatscape.place;
+package protokoll.dotori.place;
 
 public enum Category {
     KOREAN,

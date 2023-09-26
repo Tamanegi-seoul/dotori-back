@@ -1,4 +1,4 @@
-package protokoll.eatscape.place;
+package protokoll.dotori.place;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.DayOfWeek;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -30,6 +31,12 @@ public class Place {
 
     @Column(name = "operationDays")
     private List<DayOfWeek> operationDays;
+
+    @Column(name = "openTime")
+    private LocalDateTime openTime;
+
+    @Column(name = "closeTime")
+    private LocalDateTime closeTime;
 
     @Column(name = "oprationDesc")
     private String operationDesc;

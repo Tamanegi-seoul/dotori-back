@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>protokoll</groupId>
-    <artifactId>eatscape</artifactId>
+    <artifactId>dotori</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eatscape</name>
-    <description>eatscape</description>
+    <name>dotori</name>
+    <description>dotori</description>
     <properties>
         <java.version>17</java.version>
     </properties>
