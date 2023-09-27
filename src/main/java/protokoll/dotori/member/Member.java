@@ -1,4 +1,4 @@
-package protokoll.dotori.account;
+package protokoll.dotori.member;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -11,15 +11,15 @@ import org.springframework.data.annotation.LastModifiedDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "account")
+@Table(name = "member")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Account {
+public class Member {
 
     @Id
     @GeneratedValue
-    @Column(name = "account_id")
-    private long id;
+    @Column(name = "member_id")
+    private long memberId;
 
     @Column(name = "email")
     private String email;
@@ -42,7 +42,7 @@ public class Account {
     private LocalDateTime updatedAt;
 
     @Builder
-    public Account(String email, String firstName, String lastName, String password) {
+    public Member(String email, String firstName, String lastName, String password) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;

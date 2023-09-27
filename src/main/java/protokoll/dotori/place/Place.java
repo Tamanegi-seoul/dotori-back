@@ -4,13 +4,14 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import protokoll.dotori.rate.Rate;
 
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "account")
+@Table(name = "place")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Place {
@@ -18,7 +19,7 @@ public class Place {
     @Id
     @GeneratedValue
     @Column(name = "place_id")
-    private Long id;
+    private Long placeId;
 
     @Column(name = "address")
     private String address;
@@ -41,7 +42,7 @@ public class Place {
     @Column(name = "oprationDesc")
     private String operationDesc;
 
-    @OneToMany(mappedBy = "rateId")
+    @OneToMany
     private List<Rate> rates;
 
     private List<Category> categories;
