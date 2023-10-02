@@ -1,0 +1,19 @@
+# database settings
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:33061/dotori_db
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# Spring JPA
+  jpa:
+    database: mysql
+    dat abase-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

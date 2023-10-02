@@ -14,8 +14,12 @@ import java.io.IOException;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Embeddable
+@Entity
 public class ImageData {
+
+    @Id
+    @GeneratedValue
+    private Integer imageDataId;
 
     @NotNull
     private String fileName;
