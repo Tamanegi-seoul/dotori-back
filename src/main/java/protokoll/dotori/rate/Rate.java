@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import protokoll.dotori.common.BaseEntity;
 import protokoll.dotori.member.Member;
 import protokoll.dotori.place.Place;
 
@@ -11,7 +12,7 @@ import protokoll.dotori.place.Place;
 @Table(name = "rate")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Rate {
+public class Rate extends BaseEntity {
 
     @Id
     @GeneratedValue
@@ -25,7 +26,12 @@ public class Rate {
     @JoinColumn(name = "member_id")
     private Member owner;
 
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "place_id")
     private Place place;
+
+    public Long getRateId() {
+        return rateId;
+    }
 
 }

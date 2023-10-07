@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import protokoll.dotori.common.BaseEntity;
 import protokoll.dotori.rate.Rate;
 
 import java.time.DayOfWeek;
@@ -43,8 +44,13 @@ public class Place {
     private String operationDesc;
 
     @OneToMany
+    @JoinColumn(name = "place_id")
     private List<Rate> rates;
 
     private List<Category> categories;
+
+    public Long getPlaceId() {
+        return placeId;
+    }
 
 }

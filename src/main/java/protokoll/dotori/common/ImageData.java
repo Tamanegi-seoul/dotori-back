@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.springframework.web.multipart.MultipartFile;
+import protokoll.dotori.place.Menu;
 
 import java.io.IOException;
 
@@ -15,11 +16,12 @@ import java.io.IOException;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class ImageData {
+public class ImageData extends BaseEntity {
 
     @Id
     @GeneratedValue
-    private Integer imageDataId;
+    @Column(name = "image_data_id")
+    private Long imageDataId;
 
     @NotNull
     private String fileName;
@@ -30,6 +32,9 @@ public class ImageData {
     @Lob
     private byte[] imageData;
 
+    @OneToOne(mappedBy = "image")
+    private Menu menu;
+
     public ImageData updateImageData(MultipartFile updatedFile) throws IOException {
         this.fileName = updatedFile.getOriginalFilename();
         this.fileType = updatedFile.getContentType();
@@ -38,4 +43,7 @@ public class ImageData {
         return this;
     }
 
+    public Long getImageDataId() {
+        return imageDataId;
+    }
 }

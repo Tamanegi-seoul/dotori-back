@@ -1,16 +1,15 @@
 package protokoll.dotori.place;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
+import protokoll.dotori.common.BaseEntity;
 import protokoll.dotori.common.ImageData;
 
 @Entity
-public class Menu {
+public class Menu extends BaseEntity {
 
     @Id
     @GeneratedValue
+    @Column(name = "menu_id")
     private Long menuId;
 
     private String name;
@@ -18,6 +17,11 @@ public class Menu {
     private Integer price;
 
     @OneToOne
+    @JoinColumn(name = "image_data_id")
     private ImageData image;
+
+    public Long getMenuId() {
+        return menuId;
+    }
 
 }
